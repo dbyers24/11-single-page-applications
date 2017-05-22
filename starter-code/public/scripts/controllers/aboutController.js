@@ -5,8 +5,9 @@ var app = app || {};
   const aboutController = {};
 
   // TODO: Define a function that hides all main section elements, and then reveals just the #about section:
-  app.aboutController.initAboutPage = function() {
-    app.Article.all.forEach(a => $('#articles').append(a.toHtml()));
+  aboutController.initAboutPage = function() {
+    $('.tab-content').hide();
+    $('#about').fadeIn(150);
   }
   module.aboutController = aboutController;
 })(app);

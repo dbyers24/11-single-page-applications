@@ -6,8 +6,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const app = express();
-const conString = 'postgres://postgres:1234@localhost:3000';//This is Brian's CONSTRING ACTION
-// const conString = 'postgres://postgres:freeze1019@localhost:3000'; // TODO: Don't forget to set your own conString
+// const conString = 'postgres://postgres:1234@localhost:3000';//This is Brian's CONSTRING ACTION
+const conString = 'postgres://postgres:freeze1019@localhost:5432/postgres'; // TODO: Don't forget to set your own conString
 const client = new pg.Client(conString);
 client.connect();
 client.on('error', err => console.error(err));
